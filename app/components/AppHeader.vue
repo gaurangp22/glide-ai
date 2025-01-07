@@ -14,7 +14,7 @@ const isOpen = ref(false)
     >
       <div class="flex items-center justify-between">
         <NuxtLink to="/" class="z-50" @click="isOpen = false">
-          <WordMark />
+          <GlideLogo />
           <span class="sr-only">{{ settings?.data.site_title }} home page</span>
         </NuxtLink>
 
@@ -37,7 +37,7 @@ const isOpen = ref(false)
           :aria-expanded="isOpen"
           type="button"
           class="block md:hidden p-2 text-3xl text-white"
-          @click="isOpen = true"
+          @click="isOpen = false"
         >
           <Icon name="ph:x-bold" />
         </button>

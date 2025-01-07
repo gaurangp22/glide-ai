@@ -9,12 +9,12 @@ defineProps(getSliceComponentProps<Content.RichTextSlice>(
 </script>
 
 <template>
-  <section class="max-w-[600px] my-24 mx-auto">
+  <Bounded>
     <PrismicRichText
+      class="prose prose-lg prose-slate prose-invert w-full"
       :field="slice.primary.content"
-      class="richtext"
       wrapper="div"
     />
-  </section>
+  </Bounded>
 </template>
 

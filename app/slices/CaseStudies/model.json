@@ -30,10 +30,10 @@
             "multi": "paragraph,em,strong"
           }
         },
-        "cases": {
+        "case_studies": {
           "type": "Group",
           "config": {
-            "label": "Cases",
+            "label": "Case Studies",
             "repeat": true,
             "fields": {
               "link": {

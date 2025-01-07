@@ -35,7 +35,7 @@ onMounted(() => {
       {
         opacity: 0.4,
         rotate: '+=180',
-        color: '#A78BFA',
+        color: '#0284c7',
         scale: 3,
         duration: 0.6,
         stagger: {
@@ -69,7 +69,7 @@ onMounted(() => {
       {
         opacity: 0.4,
         rotate: '+=180',
-        color: '#A78BFA',
+        color: '#0284c7',
         scale: 3,
         duration: 0.6,
         stagger: {
@@ -107,14 +107,14 @@ onMounted(() => {
     style="mask-image: linear-gradient(black, transparent);"
   >
     <g class="triangle-grid-group">
-      <template v-for="(_, i) in grid[0]" :key="i">
+      <template v-for="i in grid[0]" :key="i">
         <path
-          v-for="(_, j) in grid[1]"
+          v-for="j in grid[1]"
           :key="j"
           fill="currentColor"
           opacity=".2"
           class="triangle-grid-item"
-          :d="`M${j * 32 + 5},${i * 32 + 10}l-3.75,2.165l0,-4.33l3.75,2.165z`"
+          :d="`M${(j - 1) * 32 + 5},${(i - 1) * 32 + 10}l1.806,-2.951l-5,2.951l3.936,1.049l-0.742,-1.049z`"
         />
       </template>
     </g>

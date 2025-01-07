@@ -11,7 +11,7 @@ defineProps<{ settings?: Content.SettingsDocument }>()
       aria-label="Footer"
     >
     <NuxtLink to="/">
-			<WordMark />
+			<GlideLogo />
 			<span class="sr-only">{{ settings?.data.site_title }} home page</span>
 		</NuxtLink>
 

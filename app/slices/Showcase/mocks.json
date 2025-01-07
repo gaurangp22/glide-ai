@@ -42,7 +42,7 @@
 			},
 			"icon": {
 				"__TYPE__": "FieldContent",
-				"value": "gear",
+				"value": "arrows-clockwise",
 				"type": "Select"
 			},
 			"subheading": {

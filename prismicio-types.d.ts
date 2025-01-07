@@ -103,6 +103,7 @@ export type CaseStudyDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | RichTextSlice
   | CallToActionSlice
   | ShowcaseSlice
   | IntegrationsSlice
@@ -440,15 +441,15 @@ export type CallToActionSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *CaseStudies → Default → Primary → Cases*
+ * Item in *CaseStudies → Default → Primary → Case Studies*
  */
-export interface CaseStudiesSliceDefaultPrimaryCasesItem {
+export interface CaseStudiesSliceDefaultPrimaryCaseStudiesItem {
   /**
-   * Link field in *CaseStudies → Default → Primary → Cases*
+   * Link field in *CaseStudies → Default → Primary → Case Studies*
    *
    * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **API ID Path**: case_studies.default.primary.cases[].link
+   * - **API ID Path**: case_studies.default.primary.case_studies[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.ContentRelationshipField<"case_study">;
@@ -479,14 +480,16 @@ export interface CaseStudiesSliceDefaultPrimary {
   body: prismic.RichTextField;
 
   /**
-   * Cases field in *CaseStudies → Default → Primary*
+   * Case Studies field in *CaseStudies → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: case_studies.default.primary.cases[]
+   * - **API ID Path**: case_studies.default.primary.case_studies[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  cases: prismic.GroupField<Simplify<CaseStudiesSliceDefaultPrimaryCasesItem>>;
+  case_studies: prismic.GroupField<
+    Simplify<CaseStudiesSliceDefaultPrimaryCaseStudiesItem>
+  >;
 }
 
 /**
@@ -751,7 +754,7 @@ export interface ShowcaseSliceDefaultPrimary {
    * - **API ID Path**: showcase.default.primary.icon
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  icon: prismic.SelectField<"gear" | "cycle", "filled">;
+  icon: prismic.SelectField<"gear" | "arrows-clockwise", "filled">;
 
   /**
    * Subheading field in *Showcase → Default → Primary*
@@ -934,7 +937,7 @@ declare module "@prismicio/client" {
       CallToActionSliceVariation,
       CallToActionSliceDefault,
       CaseStudiesSlice,
-      CaseStudiesSliceDefaultPrimaryCasesItem,
+      CaseStudiesSliceDefaultPrimaryCaseStudiesItem,
       CaseStudiesSliceDefaultPrimary,
       CaseStudiesSliceVariation,
       CaseStudiesSliceDefault,
