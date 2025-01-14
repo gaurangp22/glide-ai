@@ -182,32 +182,6 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 /**
- * Item in *Settings → Navigation*
- */
-export interface SettingsDocumentDataNavigationItem {
-  /**
-   * Link field in *Settings → Navigation*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: settings.navigation[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Display as Button ? field in *Settings → Navigation*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: settings.navigation[].display_as_button
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  display_as_button: prismic.BooleanField;
-}
-
-/**
  * Content for Settings documents
  */
 interface SettingsDocumentData {
@@ -247,13 +221,13 @@ interface SettingsDocumentData {
   /**
    * Navigation field in *Settings*
    *
-   * - **Field Type**: Group
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: settings.navigation[]
+   * - **API ID Path**: settings.navigation
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  navigation: prismic.GroupField<Simplify<SettingsDocumentDataNavigationItem>>;
+  navigation: prismic.Repeatable<prismic.LinkField>;
 }
 
 /**
@@ -925,7 +899,6 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
-      SettingsDocumentDataNavigationItem,
       AllDocumentTypes,
       BentoSlice,
       BentoSliceDefaultPrimaryBentoItem,

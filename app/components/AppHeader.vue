@@ -42,11 +42,11 @@ const isOpen = ref(false)
           <Icon name="ph:x-bold" />
         </button>
         <ul class="grid justify-items-end gap-8">
-          <li v-for="item in settings?.data.navigation" :key="item.link.text">
+          <li v-for="link in settings?.data.navigation" :key="link.key">
             <PrismicLink
-              :field="item.link"
+              :field="link"
               class="block min-h-11 px-3 text-3xl first:mt-8"
-              :class="{ buttonLink: item.display_as_button }"
+              :class="{ buttonLink: link.variant === 'Button' }"
               @click="isOpen = false"
             />
           </li>
@@ -55,11 +55,11 @@ const isOpen = ref(false)
 
       <!-- Desktop Nav -->
       <ul class="hidden gap-6 md:flex">
-        <li v-for="item in settings?.data.navigation" :key="item.link.text">
+        <li v-for="link in settings?.data.navigation" :key="link.key">
           <PrismicLink
-            :field="item.link"
+            :field="link"
             class="inline-flex min-h-11 items-center"
-            :class="{ buttonLink: item.display_as_button }"
+            :class="{ buttonLink: link.variant === 'Button' }"
             @click="isOpen = false"
           />
         </li>

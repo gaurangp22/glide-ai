@@ -32,32 +32,15 @@
         }
       },
       "navigation": {
-        "type": "Group",
+        "type": "Link",
         "config": {
           "label": "Navigation",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
           "repeat": true,
-          "fields": {
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "",
-                "select": null,
-                "allowTargetBlank": true,
-                "allowText": true,
-                "repeat": false
-              }
-            },
-            "display_as_button": {
-              "type": "Boolean",
-              "config": {
-                "label": "Display as Button ?",
-                "placeholder_false": "false",
-                "placeholder_true": "true",
-                "default_value": false
-              }
-            }
-          }
+          "variants": ["Link", "Button"]
         }
       }
     }

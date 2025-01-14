@@ -16,8 +16,8 @@ defineProps<{ settings?: Content.SettingsDocument }>()
 		</NuxtLink>
 
 		<ul class="flex gap-6">
-      <li v-for="item in settings?.data.navigation" :key="item.link.text">
-        <PrismicLink :field="item.link" class="inline-flex min-h-11 items-center" />
+      <li v-for="link in settings?.data.navigation" :key="link.key">
+        <PrismicLink :field="link" class="inline-flex min-h-11 items-center" />
       </li>
 		</ul>
     </nav>
