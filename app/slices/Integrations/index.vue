@@ -131,21 +131,21 @@ onMounted(() => {
 
 <style scoped>
 .signal-line {
-	--rotation: 90deg;
-	@apply h-[20px] w-[1.5px] bg-gradient-to-t md:h-[1.5px] md:w-[30px] lg:w-[40px] xl:w-[50px];
-	background-color: hsla(0, 0%, 100%, 0.1);
-	background-image: linear-gradient(
-		var(--rotation),
-		rgba(255, 255, 255, 0) 50%,
-		#0ea5e9 50%,
-		rgba(255, 255, 255, 0) 70%
-	);
-	background-size: 500% 500%;
+  --rotation: 90deg;
+  @apply h-[20px] w-[1.5px] bg-gradient-to-t md:h-[1.5px] md:w-[30px] lg:w-[40px] xl:w-[50px];
+  background-color: hsla(0, 0%, 100%, 0.1);
+  background-image: linear-gradient(
+    var(--rotation),
+    rgba(255, 255, 255, 0) 50%,
+    #0ea5e9 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  background-size: 500% 500%;
 }
 
 @media (max-width: 767px) {
-	.signal-line {
-		--rotation: 0deg;
-	}
+  .signal-line {
+    --rotation: 0deg;
+  }
 }
 </style>

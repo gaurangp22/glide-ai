@@ -11,15 +11,15 @@ defineProps<{ settings?: Content.SettingsDocument }>()
       aria-label="Footer"
     >
     <NuxtLink to="/">
-			<GlideLogo />
-			<span class="sr-only">{{ settings?.data.site_title }} home page</span>
-		</NuxtLink>
+      <GlideLogo />
+      <span class="sr-only">{{ settings?.data.site_title }} home page</span>
+    </NuxtLink>
 
-		<ul class="flex gap-6">
+    <ul class="flex gap-6">
       <li v-for="link in settings?.data.navigation" :key="link.key">
         <PrismicLink :field="link" class="inline-flex min-h-11 items-center" />
       </li>
-		</ul>
+    </ul>
     </nav>
   </footer>
 </template>
