@@ -7,26 +7,26 @@ onMounted(() => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce').matches;
 
   if (prefersReducedMotion) {
-    gsap.set('#triangle-grid', { opacity: 1 });
-    gsap.set('.triangle-grid-item', {
+    gsap.set('#glide-grid', { opacity: 1 });
+    gsap.set('.glide-grid-item', {
       opacity: 0.2,
       scale: 1
     });
     return;
   }
 
-  gsap.set('.triangle-grid-item', {
+  gsap.set('.glide-grid-item', {
     opacity: 0,
     transformOrigin: 'center',
     color: '#fff'
   });
 
-  gsap.set('#triangle-grid', { opacity: 1 });
+  gsap.set('#glide-grid', { opacity: 1 });
 
   const tl = gsap.timeline();
 
   // Entrance Animation
-  tl.to('.triangle-grid-item', {
+  tl.to('.glide-grid-item', {
     keyframes: [
       {
         opacity: 0,
@@ -61,7 +61,7 @@ onMounted(() => {
   });
 
   // Loop Animation
-  tl.to('.triangle-grid-item', {
+  tl.to('.glide-grid-item', {
     delay: 12,
     repeat: -1,
     repeatDelay: 12,
@@ -98,7 +98,7 @@ onMounted(() => {
 
 <template>
   <svg
-    id="triangle-grid"
+    id="glide-grid"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 935 425"
@@ -106,14 +106,14 @@ onMounted(() => {
     opacity="0"
     style="mask-image: linear-gradient(black, transparent);"
   >
-    <g class="triangle-grid-group">
+    <g class="glide-grid-group">
       <template v-for="i in grid[0]" :key="i">
         <path
           v-for="j in grid[1]"
           :key="j"
           fill="currentColor"
           opacity=".2"
-          class="triangle-grid-item"
+          class="glide-grid-item"
           :d="`M${(j - 1) * 32 + 5},${(i - 1) * 32 + 10}l1.806,-2.951l-5,2.951l3.936,1.049l-0.742,-1.049z`"
         />
       </template>
