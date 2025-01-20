@@ -87,7 +87,7 @@ onMounted(() => {
           class="prose prose-invert mt-4 max-w-xl"
           wrapper="div"
         />
-        <ButtonLink :field="slice.primary.cta" class="mt-6" />
+        <PrismicLink :field="slice.primary.cta" class="buttonLink mt-6" />
       </div>
       <PrismicImage
         :field="slice.primary.image"

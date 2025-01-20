@@ -25,7 +25,7 @@ defineProps(
     </div>
     <PrismicText :field="slice.primary.heading" wrapper="h2" class="mt-8 max-w-xl text-balance text-5xl" />
     <div class="flex gap-8 flex-wrap">
-      <ButtonLink v-for="cta in slice.primary.ctas" :key="cta.text" :field="cta" class="mt-6" />
+      <PrismicLink v-for="cta in slice.primary.ctas" :key="cta.text" :field="cta" class="buttonLink mt-6" />
     </div>
   </Bounded>
 </template>

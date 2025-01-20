@@ -75,10 +75,10 @@ onMounted(() => {
         wrapper="p"
       />
       <div class="flex flex-wrap gap-8 justify-center">
-        <ButtonLink
+        <PrismicLink
           v-for="cta in slice.primary.ctas"
           :key="cta.key"
-          class="hero__button mt-8 opacity-0"
+          class="hero__button buttonLink mt-8 opacity-0"
           :field="cta"
         />
       </div>

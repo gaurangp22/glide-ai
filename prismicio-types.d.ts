@@ -227,7 +227,15 @@ interface SettingsDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  navigation: prismic.Repeatable<prismic.LinkField>;
+  navigation: prismic.Repeatable<
+    prismic.LinkField<
+      string,
+      string,
+      unknown,
+      prismic.FieldState,
+      "Link" | "Button"
+    >
+  >;
 }
 
 /**
@@ -286,7 +294,7 @@ export interface BentoSliceDefaultPrimaryBentoItem {
   image: prismic.ImageField<never>;
 
   /**
-   * Is Wide ? field in *Bento → Default → Primary → Bento*
+   * Is Wide? field in *Bento → Default → Primary → Bento*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
@@ -381,7 +389,9 @@ export interface CallToActionSliceDefaultPrimary {
    * - **API ID Path**: call_to_action.default.primary.ctas
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  ctas: prismic.Repeatable<prismic.LinkField>;
+  ctas: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+  >;
 }
 
 /**
@@ -528,7 +538,9 @@ export interface HeroSliceDefaultPrimary {
    * - **API ID Path**: hero.default.primary.ctas
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  ctas: prismic.Repeatable<prismic.LinkField>;
+  ctas: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+  >;
 
   /**
    * Image field in *Hero → Default → Primary*
@@ -758,7 +770,7 @@ export interface ShowcaseSliceDefaultPrimary {
    * - **API ID Path**: showcase.default.primary.cta
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  cta: prismic.LinkField;
+  cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -837,7 +849,7 @@ export interface ShowcaseSliceReversedPrimary {
    * - **API ID Path**: showcase.reversed.primary.cta
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  cta: prismic.LinkField;
+  cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**

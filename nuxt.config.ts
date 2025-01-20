@@ -57,13 +57,5 @@ export default defineNuxtConfig({
     }
   },
 
-  tailwindcss: {
-    config: {
-      content: [
-        './app/slices/**/*.{js,ts,vue}'
-      ]
-    }
-  },
-
   compatibilityDate: '2025-01-06',
 })
