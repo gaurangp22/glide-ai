@@ -12,7 +12,7 @@
 ## Quick Start
 
 ```bash [Terminal]
-npx nuxi@latest init -t prismicio-community/nuxt-starter-prismic-glideai#HEAD glideai
+npx nuxi@latest init -t github:prismicio-community/nuxt-starter-prismic-glideai#HEAD glideai
 ```
 
 To get your own Prismic repository instance and start managing your own content, also run:
