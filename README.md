@@ -12,7 +12,13 @@
 ## Quick Start
 
 ```bash [Terminal]
-npx @slicemachine/init@latest --starter nuxt-starter-prismic-glideai
+npx nuxi@latest init -t prismicio-community/nuxt-starter-prismic-glideai#HEAD glideai
+```
+
+To get your own Prismic repository instance and start managing your own content, also run:
+```bash [Terminal]
+cd glideai
+npx @slicemachine/init@latest
 ```
 
 ## Setup
