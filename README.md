@@ -7,14 +7,12 @@
 - [Learn how to build this website on YouTube][course-youtube]
 - Documentations: [Nuxt](https://nuxt.com), [Prismic](https://prismic.io/docs/nuxt-3-setup), [Tailwind CSS](https://tailwindcss.com/docs/styling-with-utility-classes), [GSAP](https://gsap.com/docs/v3)
 
-[![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?repo=lihbr/prismic-demo-glideai)
+[![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)][nuxthub-deploy]
 
 ## Quick Start
 
 ```bash [Terminal]
-npx nuxi@latest init -t github:lihbr/prismic-demo-glideai#HEAD glideai
-cd glideai
-npx @slicemachine/init@latest
+npx @slicemachine/init@latest --starter nuxt-starter-prismic-glideai
 ```
 
 ## Setup
@@ -108,5 +106,6 @@ limitations under the License.
 ```
 
 [live-demo]: https://prismic-demo-glideai.nuxt.dev
-[stackblitz-demo]: https://stackblitz.com/github/lihbr/prismic-demo-glideai
+[stackblitz-demo]: https://stackblitz.com/github/prismicio-community/nuxt-starter-prismic-glideai
+[nuxthub-deploy]: https://hub.nuxt.com/new?repo=prismicio-community/nuxt-starter-prismic-glideai
 [course-youtube]: https://www.youtube.com/watch?v=EmvCh7Jb0Mw
